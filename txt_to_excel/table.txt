@@ -1,0 +1,24 @@
+Table: ab_user
+
+ Field              Type         Null   Key   Default  Extra
+ 0 id               int          NO     PRI   None     auto_increment
+ 1 first_name       varchar(256) NO           None    
+ 2 last_name        varchar(256) NO           None    
+ 3 username         varchar(512) NO    UNI    None    
+ 4 password         varchar(256) YES          None    
+ 5 active           tinyint(1)   YES          None    
+ 6 email            varchar(512) NO    UNI    None    
+ 7 last_login       datetime     YES          None    
+ 8 login_count      int          YES          None    
+ 9 fail_login_count int          YES          None    
+10 created_on       datetime     YES          None    
+11 changed_on       datetime     YES          None    
+12 created_by_fk    int          YES   MUL    None    
+13 changed_by_fk    int          YES   MUL    None    
+
+Table: ab_user_role
+
+ Field         Type   Null   Key  Default  Extra
+ 0 id          int    NO     PRI  None     auto_increment
+ 1 user_id     int    YES    MUL  None    
+ 2 role_id     int    YES    MUL  None
